@@ -1,6 +1,7 @@
-package ru.myrkwill.springcourse;
+package ru.myrkwill.springcourse.genres;
 
 import org.springframework.stereotype.Component;
+import ru.myrkwill.springcourse.Music;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -12,8 +13,6 @@ import javax.annotation.PreDestroy;
 @Component
 public class ClassicalMusic implements Music {
 
-    private ClassicalMusic() {}
-
     @PostConstruct
     public void init() {
         System.out.println("Init ClassicalMusic");
@@ -22,10 +21,6 @@ public class ClassicalMusic implements Music {
     @PreDestroy
     public void deinit() {
         System.out.println("Deinit ClassicalMusic");
-    }
-
-    public static ClassicalMusic getClassicalMusic() {
-        return new ClassicalMusic();
     }
 
     @Override
