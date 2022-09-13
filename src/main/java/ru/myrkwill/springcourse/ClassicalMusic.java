@@ -1,5 +1,7 @@
 package ru.myrkwill.springcourse;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author Mark Nagibin
  */
